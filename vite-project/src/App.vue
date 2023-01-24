@@ -1,11 +1,13 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
+import CardGrid from './components/CardGrid.vue'
 </script>
 
 <template>
   <h1 :style="{ backgroundColor: 'red' }">
   Welcome to Almog's Website!
   </h1>
+  <card-grid/>
 </template>
 
 <style scoped>
