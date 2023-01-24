@@ -1,13 +1,24 @@
 <script setup>
 import HelloWorld from './components/HelloWorld.vue'
 import CardGrid from './components/CardGrid.vue'
+import DatePicker from './components/DatePicker.vue';
+import { ref } from 'vue';
+
+const parentNum = ref(null);
+
+function increaseByParent(){
+  parentNum.value++;
+  
+}
 </script>
 
 <template>
   <h1 :style="{ backgroundColor: 'red' }">
   Welcome to Almog's Website!
   </h1>
-  <card-grid/>
+  <date-picker @increaseBy="increaseByParent" :parentNum="parentNum"/>
+  <!-- <card-grid/> -->
+  {{parentNum}}
 </template>
 
 <style scoped>
